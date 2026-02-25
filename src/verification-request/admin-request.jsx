@@ -366,11 +366,11 @@ const AdminVerification = () => {
                                                                 <div className="hstack gap-3">
                                                                     <div className="avatar-image avatar-sm">
                                                                         <img
-                                                                            src={`src/assets/images/avatar/${request.user_id}.png`}
+                                                                            src={`assets/images/avatar/${request.user_id}.png`}
                                                                             alt={request.user_name}
                                                                             className="img-fluid"
                                                                             onError={(e) => {
-                                                                                e.target.src = 'src/assets/images/avatar/1.png';
+                                                                                e.target.src = 'assets/images/avatar/1.png';
                                                                             }}
                                                                         />
                                                                     </div>

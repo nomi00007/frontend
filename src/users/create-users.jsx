@@ -19,7 +19,7 @@ const CreateUser = () => {
   });
 
   // State for image preview
-  const [imagePreview, setImagePreview] = useState('src/assets/images/avatar/1.png');
+  const [imagePreview, setImagePreview] = useState('assets/images/avatar/1.png');
 
   // State for form errors
   const [errors, setErrors] = useState({});

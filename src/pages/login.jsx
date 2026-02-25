@@ -15,7 +15,7 @@ const Login = () => {
         <div className="auth-cover-content-inner">
           <div className="auth-cover-content-wrapper">
             <div className="auth-img">
-              <img src="src/assets/images/auth/auth-cover-login-bg.svg" alt="" className="img-fluid" />
+              <img src="assets/images/auth/auth-cover-login-bg.svg" alt="" className="img-fluid" />
             </div>
           </div>
         </div>

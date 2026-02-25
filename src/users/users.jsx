@@ -229,11 +229,11 @@ const Users = () => {
                                                                 <div className="hstack gap-4">
                                                                     <div className="avatar-image border-0">
                                                                         <img
-                                                                            src={user.profile_image || 'src/assets/images/avatar/1.png'}
+                                                                            src={user.profile_image || 'assets/images/avatar/1.png'}
                                                                             alt={user.full_name}
                                                                             className="img-fluid"
                                                                             onError={(e) => {
-                                                                                e.target.src = 'src/assets/images/avatar/1.png';
+                                                                                e.target.src = 'assets/images/avatar/1.png';
                                                                             }}
                                                                         />
                                                                     </div>

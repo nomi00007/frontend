@@ -10,7 +10,7 @@ const CreateOrganization = () => {
   });
 
   // State for logo preview
-  const [logoPreview, setLogoPreview] = useState('src/assets/images/avatar/1.png');
+  const [logoPreview, setLogoPreview] = useState('assets/images/avatar/1.png');
 
   // State for form errors
   const [errors, setErrors] = useState({});

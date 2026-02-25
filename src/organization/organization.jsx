@@ -9,31 +9,31 @@ const Organization = () => {
             id: 1,
             name: 'Tech Corp Solutions',
             verified: 'yes',
-            logo: 'src/assets/images/avatar/1.png'
+            logo: 'assets/images/avatar/1.png'
         },
         {
             id: 2,
             name: 'Green Foundation',
             verified: 'yes',
-            logo: 'src/assets/images/avatar/2.png'
+            logo: 'assets/images/avatar/2.png'
         },
         {
             id: 3,
             name: 'EduGlobal Institute',
             verified: 'no',
-            logo: 'src/assets/images/avatar/3.png'
+            logo: 'assets/images/avatar/3.png'
         },
         {
             id: 4,
             name: 'HealthCare Plus',
             verified: 'yes',
-            logo: 'src/assets/images/avatar/4.png'
+            logo: 'assets/images/avatar/4.png'
         },
         {
             id: 5,
             name: 'Innovation Labs',
             verified: 'no',
-            logo: 'src/assets/images/avatar/5.png'
+            logo: 'assets/images/avatar/5.png'
         }
     ]);
 
