@@ -430,7 +430,7 @@ const AdminVerification = () => {
                                                                                     <span>View Details</span>
                                                                                 </a>
                                                                             </li>
-                                                                            
+
                                                                             {request.status === 'under_review' && (
                                                                                 <>
                                                                                     <li>
@@ -466,7 +466,7 @@ const AdminVerification = () => {
                                                                                     </li>
                                                                                 </>
                                                                             )}
-                                                                            
+
                                                                             {request.status !== 'under_review' && (
                                                                                 <>
                                                                                     <li>
@@ -482,6 +482,91 @@ const AdminVerification = () => {
                                                                                     </li>
                                                                                 </>
                                                                             )}
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td><td>
+                                                                <div className="hstack gap-2 justify-content-end">
+                                                                    <div className="dropdown">
+
+                                                                        {/* Toggle */}
+                                                                        <button
+                                                                            type="button"
+                                                                            className="avatar-text avatar-md border-0 bg-transparent"
+                                                                            data-bs-toggle="dropdown"
+                                                                            data-bs-offset="0,21"
+                                                                        >
+                                                                            <i className="feather feather-more-horizontal"></i>
+                                                                        </button>
+
+                                                                        {/* Menu */}
+                                                                        <ul className="dropdown-menu">
+
+                                                                            {/* View Details */}
+                                                                            <li>
+                                                                                <button
+                                                                                    type="button"
+                                                                                    className="dropdown-item"
+                                                                                    onClick={() => handleViewDetails(request)}
+                                                                                >
+                                                                                    <i className="feather feather-eye me-3"></i>
+                                                                                    <span>View Details</span>
+                                                                                </button>
+                                                                            </li>
+
+                                                                            {request.status === 'under_review' && (
+                                                                                <>
+                                                                                    <li>
+                                                                                        <button
+                                                                                            type="button"
+                                                                                            className="dropdown-item text-success"
+                                                                                            onClick={() => handleVerifyClick(request)}
+                                                                                        >
+                                                                                            <i className="feather feather-check-circle me-3"></i>
+                                                                                            <span>Verify</span>
+                                                                                        </button>
+                                                                                    </li>
+
+                                                                                    <li>
+                                                                                        <button
+                                                                                            type="button"
+                                                                                            className="dropdown-item text-danger"
+                                                                                            onClick={() => handleRejectClick(request)}
+                                                                                        >
+                                                                                            <i className="feather feather-x-circle me-3"></i>
+                                                                                            <span>Reject</span>
+                                                                                        </button>
+                                                                                    </li>
+
+                                                                                    <li><hr className="dropdown-divider" /></li>
+
+                                                                                    <li>
+                                                                                        <button
+                                                                                            type="button"
+                                                                                            className="dropdown-item"
+                                                                                            onClick={() => handleCancelRequest(request)}
+                                                                                        >
+                                                                                            <i className="feather feather-slash me-3"></i>
+                                                                                            <span>Cancel</span>
+                                                                                        </button>
+                                                                                    </li>
+                                                                                </>
+                                                                            )}
+
+                                                                            {request.status !== 'under_review' && (
+                                                                                <li>
+                                                                                    <a
+                                                                                        className="dropdown-item"
+                                                                                        href={request.document_path}
+                                                                                        target="_blank"
+                                                                                        rel="noopener noreferrer"
+                                                                                    >
+                                                                                        <i className="feather feather-file-text me-3"></i>
+                                                                                        <span>View Document</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            )}
+
                                                                         </ul>
                                                                     </div>
                                                                 </div>

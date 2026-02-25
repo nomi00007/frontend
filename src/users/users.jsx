@@ -52,7 +52,7 @@ const Users = () => {
     // State for selected users
     const [selectedUsers, setSelectedUsers] = useState([]);
     const [selectAll, setSelectAll] = useState(false);
-    
+
     // Modal states
     const [showEditModal, setShowEditModal] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -165,8 +165,8 @@ const Users = () => {
     };
 
     return (
-        <>                
-        <Navbar />
+        <>
+            <Navbar />
             <main className="nxl-container">
                 <div className="nxl-content">
                     {/* [ page-header ] start */}
@@ -286,49 +286,49 @@ const Users = () => {
                                                             </td>
                                                             <td>{formatDate(user.created_at)}</td>
                                                             <td>
-  <div className="hstack gap-2 justify-content-end">
-    <div className="dropdown">
+                                                                <div className="hstack gap-2 justify-content-end">
+                                                                    <div className="dropdown">
 
-      {/* Dropdown Toggle */}
-      <button
-        type="button"
-        className="avatar-text avatar-md border-0 bg-transparent"
-        data-bs-toggle="dropdown"
-        data-bs-offset="0,21"
-      >
-        <i className="feather feather-more-horizontal"></i>
-      </button>
+                                                                        {/* Dropdown Toggle */}
+                                                                        <button
+                                                                            type="button"
+                                                                            className="avatar-text avatar-md border-0 bg-transparent"
+                                                                            data-bs-toggle="dropdown"
+                                                                            data-bs-offset="0,21"
+                                                                        >
+                                                                            <i className="feather feather-more-horizontal"></i>
+                                                                        </button>
 
-      {/* Dropdown Menu */}
-      <ul className="dropdown-menu">
-        <li>
-          <button
-            type="button"
-            className="dropdown-item"
-            onClick={() => handleEditClick(user)}
-          >
-            <i className="feather feather-edit-3 me-3"></i>
-            <span>Edit</span>
-          </button>
-        </li>
+                                                                        {/* Dropdown Menu */}
+                                                                        <ul className="dropdown-menu">
+                                                                            <li>
+                                                                                <button
+                                                                                    type="button"
+                                                                                    className="dropdown-item"
+                                                                                    onClick={() => handleEditClick(user)}
+                                                                                >
+                                                                                    <i className="feather feather-edit-3 me-3"></i>
+                                                                                    <span>Edit</span>
+                                                                                </button>
+                                                                            </li>
 
-        <li><hr className="dropdown-divider" /></li>
+                                                                            <li><hr className="dropdown-divider" /></li>
 
-        <li>
-          <button
-            type="button"
-            className="dropdown-item text-danger"
-            onClick={() => handleDeleteClick(user)}
-          >
-            <i className="feather feather-trash-2 me-3"></i>
-            <span>Delete</span>
-          </button>
-        </li>
-      </ul>
+                                                                            <li>
+                                                                                <button
+                                                                                    type="button"
+                                                                                    className="dropdown-item text-danger"
+                                                                                    onClick={() => handleDeleteClick(user)}
+                                                                                >
+                                                                                    <i className="feather feather-trash-2 me-3"></i>
+                                                                                    <span>Delete</span>
+                                                                                </button>
+                                                                            </li>
+                                                                        </ul>
 
-    </div>
-  </div>
-</td>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     ))}
                                                 </tbody>

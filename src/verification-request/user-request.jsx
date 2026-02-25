@@ -74,13 +74,13 @@ const UserRequests = () => {
     // State for selected requests
     const [selectedRequests, setSelectedRequests] = useState([]);
     const [selectAll, setSelectAll] = useState(false);
-    
+
     // Modal states
     const [showRequestModal, setShowRequestModal] = useState(false);
     const [showDetailsModal, setShowDetailsModal] = useState(false);
     const [currentRequest, setCurrentRequest] = useState(null);
     const [showActionMenu, setShowActionMenu] = useState(null); // Track which request has open menu
-    
+
     // New request form state
     const [newRequest, setNewRequest] = useState({
         document_type: '',
@@ -241,8 +241,8 @@ const UserRequests = () => {
     };
 
     return (
-        <>                
-        <Navbar />
+        <>
+            <Navbar />
             <main className="nxl-container">
                 <div className="nxl-content">
                     {/* [ page-header ] start */}
@@ -336,35 +336,47 @@ const UserRequests = () => {
                                                                     {request.organization_consed_for_future === 'yes' ? 'Yes' : 'No'}
                                                                 </span>
                                                             </td>
-                                                             <td>
+                                                            <td>
                                                                 <div className="hstack gap-2 justify-content-end">
                                                                     <div className="dropdown">
-                                                                        <a href="javascript:void(0)" className="avatar-text avatar-md" data-bs-toggle="dropdown" data-bs-offset="0,21">
+
+                                                                        {/* Toggle Button */}
+                                                                        <button
+                                                                            type="button"
+                                                                            className="avatar-text avatar-md border-0 bg-transparent"
+                                                                            data-bs-toggle="dropdown"
+                                                                            data-bs-offset="0,21"
+                                                                        >
                                                                             <i className="feather feather-more-horizontal"></i>
-                                                                        </a>
+                                                                        </button>
+
+                                                                        {/* Dropdown Menu */}
                                                                         <ul className="dropdown-menu">
                                                                             <li>
-                                                                                <a
+                                                                                <button
+                                                                                    type="button"
                                                                                     className="dropdown-item"
-                                                                                    href="javascript:void(0)"
                                                                                     onClick={() => handleEditClick(org)}
                                                                                 >
                                                                                     <i className="feather feather-edit-3 me-3"></i>
                                                                                     <span>Cancel</span>
-                                                                                </a>
+                                                                                </button>
                                                                             </li>
-                                                                            <li className="dropdown-divider"></li>
+
+                                                                            <li><hr className="dropdown-divider" /></li>
+
                                                                             <li>
-                                                                                <a
+                                                                                <button
+                                                                                    type="button"
                                                                                     className="dropdown-item text-danger"
-                                                                                    href="javascript:void(0)"
                                                                                     onClick={() => handleDeleteClick(org)}
                                                                                 >
                                                                                     <i className="feather feather-trash-2 me-3"></i>
                                                                                     <span>Delete</span>
-                                                                                </a>
+                                                                                </button>
                                                                             </li>
                                                                         </ul>
+
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -542,7 +554,7 @@ const UserRequests = () => {
                                             </table>
                                         </div>
                                     </div>
-                                    
+
                                     {currentRequest.verification_remarks && (
                                         <div className="mt-3 p-3 bg-light rounded">
                                             <h6 className="fw-semibold mb-2">Verification Remarks:</h6>
@@ -557,9 +569,9 @@ const UserRequests = () => {
                                     )}
                                 </div>
                                 <div className="modal-footer">
-                                    <a 
-                                        href={currentRequest.document_path} 
-                                        target="_blank" 
+                                    <a
+                                        href={currentRequest.document_path}
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn btn-primary me-2"
                                     >

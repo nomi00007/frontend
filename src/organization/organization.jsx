@@ -311,32 +311,44 @@ const Organization = () => {
                                                             <td>
                                                                 <div className="hstack gap-2 justify-content-end">
                                                                     <div className="dropdown">
-                                                                        <a href="javascript:void(0)" className="avatar-text avatar-md" data-bs-toggle="dropdown" data-bs-offset="0,21">
+
+                                                                        {/* Toggle */}
+                                                                        <button
+                                                                            type="button"
+                                                                            className="avatar-text avatar-md border-0 bg-transparent"
+                                                                            data-bs-toggle="dropdown"
+                                                                            data-bs-offset="0,21"
+                                                                        >
                                                                             <i className="feather feather-more-horizontal"></i>
-                                                                        </a>
+                                                                        </button>
+
+                                                                        {/* Menu */}
                                                                         <ul className="dropdown-menu">
                                                                             <li>
-                                                                                <a
+                                                                                <button
+                                                                                    type="button"
                                                                                     className="dropdown-item"
-                                                                                    href="javascript:void(0)"
                                                                                     onClick={() => handleEditClick(org)}
                                                                                 >
                                                                                     <i className="feather feather-edit-3 me-3"></i>
                                                                                     <span>Edit</span>
-                                                                                </a>
+                                                                                </button>
                                                                             </li>
-                                                                            <li className="dropdown-divider"></li>
+
+                                                                            <li><hr className="dropdown-divider" /></li>
+
                                                                             <li>
-                                                                                <a
+                                                                                <button
+                                                                                    type="button"
                                                                                     className="dropdown-item text-danger"
-                                                                                    href="javascript:void(0)"
                                                                                     onClick={() => handleDeleteClick(org)}
                                                                                 >
                                                                                     <i className="feather feather-trash-2 me-3"></i>
                                                                                     <span>Delete</span>
-                                                                                </a>
+                                                                                </button>
                                                                             </li>
                                                                         </ul>
+
                                                                     </div>
                                                                 </div>
                                                             </td>
