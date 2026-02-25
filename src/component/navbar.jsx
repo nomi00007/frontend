@@ -131,13 +131,13 @@ const Navbar = () => {
               </div>
               <div className="dropdown nxl-h-item">
                 <Link to="#" data-bs-toggle="dropdown" role="button" data-bs-auto-close="outside" onClick={handleClick}>
-                  <img src="src/assets/images/avatar/1.png" alt="user-image" className="img-fluid user-avtar me-0" />
+                  <img src="assets/images/avatar/1.png" alt="user-image" className="img-fluid user-avtar me-0" />
                 </Link>
                 <div className="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
                   {/* User dropdown content */}
                   <div className="dropdown-header">
                     <div className="d-flex align-items-center">
-                      <img src="src/assets/images/avatar/1.png" alt="user-image" className="img-fluid user-avtar" />
+                      <img src="assets/images/avatar/1.png" alt="user-image" className="img-fluid user-avtar" />
                       <div>
                         <h6 className="text-dark mb-0">Alexandra Della <span className="badge bg-soft-success text-success ms-1">PRO</span></h6>
                         <span className="fs-12 fw-medium text-muted">alex@example.com</span>
