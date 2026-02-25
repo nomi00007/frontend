@@ -286,37 +286,49 @@ const Users = () => {
                                                             </td>
                                                             <td>{formatDate(user.created_at)}</td>
                                                             <td>
-                                                                <div className="hstack gap-2 justify-content-end">
-                                                                    <div className="dropdown">
-                                                                        <a href="javascript:void(0)" className="avatar-text avatar-md" data-bs-toggle="dropdown" data-bs-offset="0,21">
-                                                                            <i className="feather feather-more-horizontal"></i>
-                                                                        </a>
-                                                                        <ul className="dropdown-menu">
-                                                                            <li>
-                                                                                <a 
-                                                                                    className="dropdown-item" 
-                                                                                    href="javascript:void(0)"
-                                                                                    onClick={() => handleEditClick(user)}
-                                                                                >
-                                                                                    <i className="feather feather-edit-3 me-3"></i>
-                                                                                    <span>Edit</span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li className="dropdown-divider"></li>
-                                                                            <li>
-                                                                                <a
-                                                                                    className="dropdown-item text-danger"
-                                                                                    href="javascript:void(0)"
-                                                                                    onClick={() => handleDeleteClick(user)}
-                                                                                >
-                                                                                    <i className="feather feather-trash-2 me-3"></i>
-                                                                                    <span>Delete</span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+  <div className="hstack gap-2 justify-content-end">
+    <div className="dropdown">
+
+      {/* Dropdown Toggle */}
+      <button
+        type="button"
+        className="avatar-text avatar-md border-0 bg-transparent"
+        data-bs-toggle="dropdown"
+        data-bs-offset="0,21"
+      >
+        <i className="feather feather-more-horizontal"></i>
+      </button>
+
+      {/* Dropdown Menu */}
+      <ul className="dropdown-menu">
+        <li>
+          <button
+            type="button"
+            className="dropdown-item"
+            onClick={() => handleEditClick(user)}
+          >
+            <i className="feather feather-edit-3 me-3"></i>
+            <span>Edit</span>
+          </button>
+        </li>
+
+        <li><hr className="dropdown-divider" /></li>
+
+        <li>
+          <button
+            type="button"
+            className="dropdown-item text-danger"
+            onClick={() => handleDeleteClick(user)}
+          >
+            <i className="feather feather-trash-2 me-3"></i>
+            <span>Delete</span>
+          </button>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</td>
                                                         </tr>
                                                     ))}
                                                 </tbody>
