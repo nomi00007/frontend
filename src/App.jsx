@@ -9,6 +9,7 @@ import Organization from './organization/organization';
 import CreateOrganization from './organization/create-organization';
 import UserRequests from './verification-request/user-request';
 import AdminRequests from './verification-request/admin-request';
+import Payment from './payments/payments';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/createOrganization" element={<CreateOrganization />} />
         <Route path="/userRequests" element={<UserRequests />} />
         <Route path="/adminRequests" element={<AdminRequests />} />
+        <Route path="/payments" element={<Payment />} />
       </Routes>
     </>
   )
